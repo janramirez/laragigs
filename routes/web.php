@@ -2,6 +2,7 @@
 
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
 
 /*
@@ -34,3 +35,6 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 
 // show single listing
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+// show register/create form
+Route::get('/register', [UserController::class, 'create']);

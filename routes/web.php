@@ -2,6 +2,7 @@
 
 use App\Models\Listing;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingController;
 
 /*
 |--------------------------------------------------------------------------

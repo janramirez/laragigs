@@ -64,3 +64,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Common Resource Routes
+
+- **index** show all listings
+- **show** show single listing
+- **create** show form to create new listing
+- **store** store new listing
+- **edit** show form to edit listing
+- **update** update listing
+- **destroy** delete listing

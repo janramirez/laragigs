@@ -9,7 +9,7 @@
     
         <x-card class='p-10'>
             <div class="flex flex-col items-center justify-center text-center">
-                <img src="{{asset('images/no-image.png')}}" alt="" class="w-48 mr-6 mb-6" />
+                <img src="{{$listing->logo ? asset('storage/' . $listing->logo) : asset('images/no-image.png')}}" alt="" class="w-48 mr-6 mb-6" />
     
                 <h3 class="text-2xl mb-2">
                     {{$listing->title}}

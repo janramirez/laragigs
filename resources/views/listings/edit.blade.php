@@ -62,7 +62,7 @@
             <div class="mb-6">
                 <label for="logo" class="inline-block text-lg mb-2">Company Logo</label>
                 <input type="file" name="logo" class="border border-gray-200 rounded p-2 w-full" />
-                
+
                 <img src="{{$listing->logo ? asset('storage/' . $listing->logo) : asset('images/no-image.png')}}" alt="" class="w-48 mr-6 mb-6" />
 
                 @error('logo')
@@ -80,7 +80,7 @@
             </div>
             <div class="mb-6">
                 <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
-                    Create Gig
+                    Update Gig
                 </button>
                 <a href="/" class="text-black ml-4"> Back </a>
             </div>

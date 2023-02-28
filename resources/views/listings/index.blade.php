@@ -12,7 +12,7 @@
         @endforeach
     
         @else
-        <p>No listings available</p>
+        <x-card>No listings available</x-card>
     
         @endunless
     

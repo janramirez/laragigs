@@ -8,16 +8,16 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    //
+    // show all
     public function index()
     {
-
+        // TODO
     }
 
-    //
+    // show one
     public function show()
     {
-
+        // TODO
     }
 
     // show registration form
@@ -80,13 +80,13 @@ class UserController extends Controller
         return back()->with(['email' => 'Invalid credentials'])->onlyInput('email');
     }
 
-    //
+    // update user
     public function update()
     {
 
     }
 
-    //
+    // delete user
     public function destroy()
     {
 

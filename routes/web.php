@@ -50,3 +50,10 @@ Route::get('/login', [UserController::class, 'login']);
 
 // log users in
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::get('/login/azure', '\App\Http\Middleware\AppAzure@azure')
+    ->name('azure.login');
+Route::get('/login/azurecallback', '\App\Http\Middleware\AppAzure@azurecallback')
+    ->name('azure.callback');
+Route::get('/logout/azure', '\App\Http\Middleware\AppAzure@azurelogout')
+    ->name('azure.logout');

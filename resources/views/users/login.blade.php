@@ -45,5 +45,14 @@
             </div>
         </form>
     </x-card>
+    <x-card class="p-10 max-w-lg mx-auto mt-2" >
+        <div class="">
+            <a href="login/azure">
+                <button type="submit" class="bg-blue-500 text-white rounded py-2 px-4 hover:bg-black w-full">
+                    <i class="fa-brands fa-windows"></i> Sign in using your Campus Mail
+                </button>
+            </a>
+        </div>
+    </x-card>
 
 </x-layout>

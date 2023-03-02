@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\User;
 use App\Models\Listing;
 use Faker\Provider\Lorem;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class ListingController extends Controller
 {
@@ -65,6 +68,12 @@ class ListingController extends Controller
     // update listing
     public function update(Request $request, Listing $listing)
     {
+
+        // make sure user is owner before making changes
+        if($listing->user_id !== auth()->id()) {
+            abort(403, 'Unauthorized Action!');
+        }
+
         $formFields = $request->validate([
             'title' => 'required',
             'company' => ['required'],
@@ -86,7 +95,31 @@ class ListingController extends Controller
     // delete listing
     public function destroy(Listing $listing)
     {
+
+        // make sure user is owner before making changes
+        if($listing->user_id !== auth()->id()) {
+            abort(403, 'Unauthorized Action!');
+        }
+        
         $listing->delete();
         return redirect('/')->with('message', 'Listing deleted successfully');
     }
+
+    //manage listing
+    /** @var \App\Models\User  $user */
+    public function manage()
+    {
+        $user = auth()->user();
+        // dd(Listing::users()->get());
+        return view('listings.manage', ['listings' => auth()->user()->listings()->get()]);
+    }
+
+    public function myself() {
+        $user = auth()->user();
+
+        if($user) {
+            return User::find($user->id);
+        }
+    }
+
 }

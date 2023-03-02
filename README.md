@@ -75,3 +75,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - **edit** show form to edit listing
 - **update** update listing
 - **destroy** delete listing
+
+# REMEMBER TO ALSO CHECK VSCODE EXTENSION SETTINGS WHEN THERE IS AN ANNOYING ERROR THAT JUST WON'T GO AWAY!
+*(yes, that's all caps. I. AM. MAD... just kidding! have fun coding!)*

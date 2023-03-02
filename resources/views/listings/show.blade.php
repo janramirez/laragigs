@@ -7,7 +7,7 @@
     </a>
     <div class="mx-4">
         {{-- @auth --}}
-        <x-card class="mt-4 flex justify-end p-2 space-x-6 mb-2">
+        {{-- <x-card class="mt-4 flex justify-end p-2 space-x-6 mb-2">
             <a href="/listings/{{ $listing->id }}/edit">
                 <i class="fa-solid fa-pencil"></i> Edit
             </a>
@@ -18,7 +18,7 @@
                     <i class="fa-solid fa-trash"></i> Delete
                 </button>
             </form>
-        </x-card>
+        </x-card> --}}
         {{-- @endauth --}}
 
         <x-card class='p-10'>
